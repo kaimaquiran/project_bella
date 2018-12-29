@@ -3,6 +3,7 @@
 namespace PMS\Http\Controllers\Auth;
 
 use PMS\User;
+use PMS\UserInfo;
 use PMS\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -59,17 +60,30 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \PMS\User
+     * @return \PMS\UserInfo
      */
     protected function create(array $data)
     {
         //insert to user_info tbl
         
-
         //insert to user tbl
-        return User::create([
+        $user =  User::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $user_details = UserInfo::create([
+            'user_id'       =>   $user->id,
+            'first_name'    =>   $data['firstname'],
+            'middle_name'   =>   $data['middlename'],
+            'last_name'     =>   $data['lastname'],
+            'gender'        =>   $data['gender'],
+            'birthday'      =>   $data['birthday'],
+        ]);
+
+
+        return $user;
+
     }
 }

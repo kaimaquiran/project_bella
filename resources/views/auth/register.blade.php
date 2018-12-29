@@ -54,6 +54,29 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="gender" id="gender" class="form-control">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="LGBTQIA">LGBTQIA</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Birthday') }}</label>
+
+                            <div class="col-md-6">
+                               <input type="date" name="birthday" id="birthday" class="form-control">
+                            </div>
+                        </div>
+
+
+
+
                         <hr>
                         
                         <div class="form-group row">
