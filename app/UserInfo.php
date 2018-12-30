@@ -20,5 +20,7 @@ class UserInfo extends Model
      *
      * @var array
      */
-    protected $hidden = [];
+    protected $hidden = [
+        'user_id'
+    ];
 }
