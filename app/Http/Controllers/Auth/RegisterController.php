@@ -8,6 +8,7 @@ use PMS\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\DB;
 
 class RegisterController extends Controller
 {
@@ -55,6 +56,24 @@ class RegisterController extends Controller
         ]);
     }
 
+    public function showRegistrationForm()
+    {
+        $user_info = UserInfo::all();
+        $user = User::all();
+
+        $account_type = DB::table('account_type')->get();
+
+        $total_arr = $user->merge($user_info);
+        // $total_arr = $total_arr->merge($account_type);
+
+        // echo '<pre>';
+        // echo var_dump($total_arr);
+        // echo '</pre>';
+        // return;
+        
+        return view("auth.register")->with(['data'=>$total_arr,'account_types'=>$account_type]);
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -68,9 +87,10 @@ class RegisterController extends Controller
         
         //insert to user tbl
         $user =  User::create([
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'username'      => $data['username'],
+            'email'         => $data['email'],
+            'password'      => Hash::make($data['password']),
+            'account_type'  =>   $data['account_type'],
         ]);
 
         $user_details = UserInfo::create([

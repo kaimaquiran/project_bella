@@ -78,6 +78,18 @@
 
 
                         <hr>
+
+                        <div class="form-group row">
+                            <label for="account_type" class="col-md-4 col-form-label text-md-right">{{ __('Account Type') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="account_type" id="account_type" class="form-control">
+                                    @foreach($account_types as $type)
+                                        <option value="{{ $type->id }}">{{ $type->account_type_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         
                         <div class="form-group row">
                             <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
