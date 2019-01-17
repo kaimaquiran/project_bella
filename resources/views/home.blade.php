@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container is-fluid">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -15,7 +15,9 @@
                     @endif
 
                     
-                    <h1>Hello, {{Auth::user()->username}}!</h1>
+                    <h1>Hello, {{ Auth::user()->username }}!</h1>
+
+                    <button class="button is-primary">View Tasks</button>
                 </div>
             </div>
         </div>
