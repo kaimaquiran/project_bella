@@ -17,7 +17,31 @@
                     
                     <h1>Hello, {{ Auth::user()->username }}!</h1>
 
-                    <button class="button is-primary">View Tasks</button>
+                    @switch(Auth::user()->account_type)
+
+                        @case(1)
+                            @include('interface.admin')
+                        @break
+
+                        @case(2)
+                            @include('interface.employee')
+                        @break
+
+                        @case(3)
+                            @include('interface.manager')
+                        @break
+
+                        @case(4)
+                            @include('interface.stakeholder')
+                        @break
+
+                        @default
+                            @include('interface.employee')
+                        @break
+
+                    @endswitch
+
+                    
                 </div>
             </div>
         </div>
