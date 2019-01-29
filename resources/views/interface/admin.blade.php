@@ -1,5 +1,5 @@
 <h1>I'm a Super Admin</h1>
 
-<button class="button is-primary">Manage Tasks</button>
-<button class="button is-primary">Manage Users</button>
+<a href="/manage_project" class="button is-primary">Manage Projects</a>
+<a href="/manage_user" class="button is-primary">Manage Users</a>
 <button class="button is-primary">Manage Reports</button>

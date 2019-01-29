@@ -1,3 +1,4 @@
-<h1>I'm an employee</h1>
+<br>
 
-<button class="button is-primary">View My Tasks</button>
+@include('employee/index')
+

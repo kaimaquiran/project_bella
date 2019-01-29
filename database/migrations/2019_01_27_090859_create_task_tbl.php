@@ -19,6 +19,7 @@ class CreateTaskTbl extends Migration
             $table->string('description');
             $table->unsignedInteger('project_id');
             $table->unsignedInteger('task_assigned_to');
+            $table->unsignedInteger('task_priority');
             $table->string('task_status');
             $table->unsignedInteger('task_progress');
             $table->timestamps();

@@ -81,6 +81,7 @@
 
             <div class="content">
               <h1>Project Management System</h1>
+              <p>Plain simple. Nothing more. Nothing less.</p>
             </div>
         </div>
     </body>

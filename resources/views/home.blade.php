@@ -15,7 +15,7 @@
                     @endif
 
                     
-                    <h1>Hello, {{ Auth::user()->username }}!</h1>
+                    <h1 class="text-center">Hello, {{ Auth::user()->username }}!</h1>
 
                     @switch(Auth::user()->account_type)
 
