@@ -11,7 +11,13 @@
 
         <!-- Styles -->
         <style>
+                    
+
             html, body {
+                background: url('{{ asset('assets/image/home-bg.jpg')}}');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -19,6 +25,7 @@
                 height: 100vh;
                 margin: 0;
             }
+
 
             .full-height {
                 height: 100vh;
@@ -42,6 +49,7 @@
 
             .content {
                 text-align: center;
+                color:#fff;
             }
 
             .title {
@@ -49,7 +57,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
