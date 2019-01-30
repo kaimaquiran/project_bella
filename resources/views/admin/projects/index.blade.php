@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Manage Projects</div>
+                 <div class="card-header"><a href="/home" class="button is-default"><i class="fas fa-chevron-circle-left"></i>&nbsp;Back to dashboard</a></div>
                  <div class="card-body">
             		
-                    
+                    <h4>Manage Projects</h4>
                     <table class="table is-bordered">
                         <thead>
                             <th>Project Name</th>

@@ -30,7 +30,12 @@ Route::get('/manage_project','ManageProjectsController@index')->name('manage_pro
 Route::get('/manage_task','ManageTasksController@index')->name('manage_task');
 
 
-//view tasks
+//view task
+
+
+//view task url
+
+
 
 //
 

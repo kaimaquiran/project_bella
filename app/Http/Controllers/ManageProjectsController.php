@@ -12,4 +12,20 @@ class ManageProjectsController extends Controller
     {
     	return view('admin/projects/index');
     }
+
+    
+    public function create()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+
+    public function destroy()
+    {
+
+    }
 }
