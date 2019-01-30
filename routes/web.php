@@ -23,13 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 //manage users
 Route::get('/manage_user','ManageUsersController@index')->name('manage_user');
 
+Route::get('/manage_user/create','ManageUsersController@create')->name('create_user');
 
-
-
-
-
-
-
+Route::post('/manage_user','ManageUsersController@store')->name('user.store');
 
 
 
@@ -37,7 +33,9 @@ Route::get('/manage_user','ManageUsersController@index')->name('manage_user');
 //manage projects
 Route::get('/manage_project','ManageProjectsController@index')->name('manage_project');
 
+Route::get('/manage_project/create','ManageProjectsController@create')->name('create_project');
 
+Route::post('/manage_project','ManageProjectsController@store')->name('project.store');
 
 
 

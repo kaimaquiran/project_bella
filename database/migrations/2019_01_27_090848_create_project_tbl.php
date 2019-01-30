@@ -20,7 +20,7 @@ class CreateProjectTbl extends Migration
             $table->unsignedInteger('creator');
             $table->string('project_assigned_to',255);
             $table->string('project_status');
-            $table->string('viewers',255);
+            $table->string('viewers',255)->nullable();
 
             $table->timestamps();
         });

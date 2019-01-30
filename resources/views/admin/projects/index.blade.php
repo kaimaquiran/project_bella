@@ -12,21 +12,25 @@
                     <table class="table is-bordered">
                         <thead>
                             <th>Project Name</th>
-                            <th>Creator</th>
-                            <th></th>
+                            <th>Description</th>
+                            <th>Assigned To</th>
                             <th></th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            @if($projects)
+                                @foreach($projects as $project)
+                                <tr>
+                                    <td>{{ $project->project_name }}</td>
+                                    <td>{{ $project->description }}</td>
+                                    <td>{{ $project->project_assigned_to }}</td>
+                                    <td></td>
+                                </tr>
+                                @endforeach
+                            @endif
                         </tbody>
                     </table>
 
-                    <button class="button is-primary float-right">Add Project</button>
+                    <a href="{{ route('create_project') }}" class="button is-primary float-right">Add Project</a>
             	</div>
             </div>
         </div>

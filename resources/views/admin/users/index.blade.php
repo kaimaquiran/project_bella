@@ -30,7 +30,7 @@
                         </tbody>
                     </table>
 
-                    <button class="button is-primary float-right">Add User</button>
+                    <a href="{{ route('create_user') }}" class="button is-primary float-right">Add User</a>
 
             	</div>
             </div>
