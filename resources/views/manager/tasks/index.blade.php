@@ -11,21 +11,25 @@
                     <table class="table is-bordered">
                         <thead>
                             <th>Task Name</th>
-                            <th>Assigned to</th>
+                            <th>Description</th>
                             <th>Project</th>
                             <th></th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        @if($task)
+                            @foreach($task as $task)
+                                <tr>
+                                    <td>{{ $task->task_name }}</td>
+                                    <td>{{ $task->description }}</td>
+                                    <td>{{ $task->project_id }}</td>
+                                    <td></td>
+                                </tr>
+                            @endforeach
+                        @endif
                         </tbody>
                     </table>
 
-                    <button class="button is-primary float-right">Add Task</button>
+                    <a href="{{ route('create_task') }}" class="button is-primary float-right">Add Task</a>
             	</div>
             </div>
         </div>

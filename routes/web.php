@@ -39,14 +39,12 @@ Route::post('/manage_project','ManageProjectsController@store')->name('project.s
 
 
 
-
-
-
-
-
-
 //manage tasks
 Route::get('/manage_task','ManageTasksController@index')->name('manage_task');
+
+Route::get('/manage_task/create','ManageTasksController@create')->name('create_task');
+
+Route::post('/manage_task','ManageTasksController@store')->name('task.store');
 
 
 
