@@ -34,7 +34,6 @@ class ManageUsersController extends Controller
 
 
 
-
     //add
     public function store()
     {
