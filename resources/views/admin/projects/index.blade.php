@@ -14,7 +14,6 @@
                             <th>Project Name</th>
                             <th>Description</th>
                             <th>Assigned To</th>
-                            <th></th>
                         </thead>
                         <tbody>
                             @if($projects)
@@ -22,8 +21,7 @@
                                 <tr>
                                     <td>{{ $project->project_name }}</td>
                                     <td>{{ $project->description }}</td>
-                                    <td>{{ $project->project_assigned_to }}</td>
-                                    <td></td>
+                                    <td>{{ $project->user->first_name }} {{ $project->user->last_name }}</td>
                                 </tr>
                                 @endforeach
                             @endif

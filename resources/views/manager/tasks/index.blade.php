@@ -13,7 +13,6 @@
                             <th>Task Name</th>
                             <th>Description</th>
                             <th>Project</th>
-                            <th></th>
                         </thead>
                         <tbody>
                         @if($task)
@@ -21,8 +20,7 @@
                                 <tr>
                                     <td>{{ $task->task_name }}</td>
                                     <td>{{ $task->description }}</td>
-                                    <td>{{ $task->project_id }}</td>
-                                    <td></td>
+                                    <td>{{ $task->project->project_name }}</td>
                                 </tr>
                             @endforeach
                         @endif

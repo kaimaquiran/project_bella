@@ -48,16 +48,9 @@ Route::post('/manage_task','ManageTasksController@store')->name('task.store');
 
 
 
-
-
-
-
-
-
-
-
-
 //view task
+
+Route::patch('/home/{id}','EmployeeController@update')->name('update_task');
 
 
 //view task url

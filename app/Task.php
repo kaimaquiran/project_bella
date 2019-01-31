@@ -23,4 +23,14 @@ class Task extends Model
     protected $hidden = [
         
     ];
+
+    public function project()
+    {
+        return $this->belongsTo('PMS\Project','project_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('PMS\UserInfo','task_assigned_to','user_id');
+    }
 }

@@ -23,4 +23,14 @@ class Project extends Model
     protected $hidden = [
         
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('PMS\UserInfo','project_assigned_to','user_id'); 
+    }
+
+    public function creator()
+    {
+        return $this->belongsTo('PMS\UserInfo','creator','user_id');
+    }
 }
